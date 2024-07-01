@@ -1,8 +1,20 @@
 // types.ts
 
+export type Subcategory = string;
+
 export type Category = {
   name: string;
-  subcategories: string[];
+  subcategories: Subcategory[];
+};
+
+export type Location = {
+  name: string;
+  country: string;
+};
+
+export type Country = {
+  name: string;
+  subcategories: string[]; // e.g., regions or states
 };
 
 export type Shop = {
@@ -21,12 +33,21 @@ export type Product = {
   description: string;
   imageUrl: string;
   location: string;
+  country: string;
   rating: number;
   shopId: number;
-  country: string;
+  reviews: number;
+  purchases: number;
 };
 
 export type CartItem = {
   product: Product;
   quantity: number;
+};
+
+export type FilterState = {
+  country: string | null;
+  location: string | null;
+  category: string | null;
+  subcategory: string | null;
 };

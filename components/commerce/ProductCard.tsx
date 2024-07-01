@@ -1,5 +1,6 @@
 // components/ProductCard.tsx
 import React from 'react';
+import Image from 'next/image';
 import { Star, MapPin } from 'lucide-react';
 import { Product } from '@/types/commercetypes';
 
@@ -10,8 +11,9 @@ type ProductCardProps = {
 
 const ProductCard: React.FC<ProductCardProps> = ({ product, onClick }) => (
   <div onClick={onClick} className="bg-white rounded-lg shadow-md overflow-hidden cursor-pointer transition-all hover:shadow-xl hover:-translate-y-1">
-    <div className="aspect-w-1 aspect-h-1 w-full">
-      <img src={product.imageUrl} alt={product.name} className=" flex m-1 p-1 h-42 w-36 mx-auto object-fit " />
+    <div className="relative w-full h-40">
+    <img src={product.imageUrl} alt={product.name} className="w-full h-40 object-fit rounded mb-2 p-1" />
+      
     </div>
     <div className="p-2">
       <h3 className="font-medium text-sm mb-1 truncate">{product.name}</h3>
