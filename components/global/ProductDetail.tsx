@@ -6,8 +6,8 @@ import { ProductDetailProps } from '@/types/globalShopping';
 export const ProductDetail: React.FC<ProductDetailProps> = ({ product, onBack, onAddToCart }) => (
   <div className="p-4 ">
     <button onClick={onBack} className="mb-4 flex items-center text-purple-400">
-      <ChevronLeft size={16} />
-      <span className="ml-1 text-sm">Back</span>
+      <ChevronLeft size={64} className='flex rounded-full animate-pulse' />
+      <span className="ml-1 text-2xl">Back</span>
     </button>
     <div className="bg-white p-4 rounded-lg">
     <div className=" flex items-center justify-center">       
