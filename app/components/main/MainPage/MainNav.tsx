@@ -1,6 +1,6 @@
 import * as React from "react";
 import Link from "next/link";
-import nroutes from "@/app/routes/navbar_routes";
+import nroutes from "@/app/(routes)/navbar_routes";
 
 export function MainNav() {
   return (

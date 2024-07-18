@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import sroutes from "@/app/routes/sidebar_routes";
+import sroutes from "@/app/(routes)/sidebar_routes";
 import Link from "next/link";
 export function LSidebarNav() {
   return (

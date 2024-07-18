@@ -3,6 +3,7 @@ import React from 'react';
 import { ProductCard } from './ProductCard';
 import { ContentAreaProps } from '@/types/globalShopping';
 import { products } from '@/components/global/data';
+import { TailwindIndicator } from '@/app/components/main/MainPage/Tailwindindicator';
 
 export const ContentArea: React.FC<ContentAreaProps> = ({ activeTab, onProductClick }) => {
   const content = {
@@ -16,17 +17,21 @@ export const ContentArea: React.FC<ContentAreaProps> = ({ activeTab, onProductCl
       </div>
     ),
     Farmers: (
-      <div className="mt-4  mb-20 grid grid-cols-2 md:grid-cols-6 md:gap-4 gap-2 mx-4 md:mx-6 items-center">
+      <div className="mx-auto bg-white m-1 p-1 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 items-center justify-center mb-8">
+        <TailwindIndicator />
         {products.Farmers.map((product, index) => (
           <ProductCard key={index} {...product} onClick={() => onProductClick(product)} />
         ))}
+        
       </div>
     ),
     Goods: (
-      <div className="mt-4  mb-20 grid grid-cols-2  md:grid-cols-6 md:gap-4  gap-2 mx-4 md:mx-6 items-center ">
+      <div className="mx-auto m-1 p-1 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 items-center justify-center ">
+         <TailwindIndicator />
         {products.Goods.map((product, index) => (
           <ProductCard key={index} {...product} onClick={() => onProductClick(product)} />
         ))}
+       
       </div>
     ),
     Profile: (

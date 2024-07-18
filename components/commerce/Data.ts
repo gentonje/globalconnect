@@ -30,6 +30,10 @@ export const countries: Country[] = [
     name: "Tanzania",
     subcategories: ["Dar es Salaam", "Arusha", "Zanzibar", "Mwanza"]
   },
+  {
+    name: "Rwanda",
+    subcategories: ["Kigali", "Kipote", "Makute", "Matope"]
+  },
   // Add more countries as needed
 ];
 
@@ -38,6 +42,9 @@ export const locations: Location[] = [
   { name: "Mombasa", country: "Kenya" },
   { name: "Kampala", country: "Uganda" },
   { name: "Dar es Salaam", country: "Tanzania" },
+  { name: "Kigali", country: "Rwanda" },
+  { name: "Kipote", country: "Rwanda" },
+
   // Add more locations as needed
 ];
 
@@ -56,7 +63,7 @@ export const mockProducts: Product[] = [
     category: "Electronics",
     subcategory: "Smartphones", 
     description: "256GB + 8GB, 50MP Camera, 5000mAh", 
-    imageUrl: "/images/galaxy24.jpeg", 
+    imageUrl: "/images/smartv.png", 
     location: "Nairobi", 
     country: "Kenya",
     rating: 4.5, 
@@ -70,12 +77,27 @@ export const mockProducts: Product[] = [
     price: 5999, 
     category: "Fashion",
     subcategory: "Men's Clothing", 
-    description: "Genuine leather, multiple pockets", 
-    imageUrl: "/images/tecnopop.jpeg", 
+    description: "Techno Original Phone, multiple pockets", 
+    imageUrl: "/images/lg50.jpg", 
     location: "Kampala", 
     country: "Uganda",
     rating: 4.3, 
     shopId: 2,
+    reviews: 85,
+    purchases: 320
+  },
+  { 
+    id: 3, 
+    name: "Leather Jacket", 
+    price: 2999, 
+    category: "Fashion",
+    subcategory: "Men's Clothing", 
+    description: "Techno Original Phone, multiple pockets", 
+    imageUrl: "/images/lg51.jpg", 
+    location: "Kampala", 
+    country: "Uganda",
+    rating: 4.3, 
+    shopId: 3,
     reviews: 85,
     purchases: 320
   },

@@ -1,4 +1,4 @@
-import downloadroutes from "@/app/routes/downloadroutes";
+import downloadroutes from "@/app/(routes)/downloadroutes";
 import Link from "next/link";
 import React, { useContext } from "react";
 

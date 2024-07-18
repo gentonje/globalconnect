@@ -11,7 +11,7 @@ import BottomNavigation from '@/components/commerce/BottomNavigation';
 import { Product, FilterState, CartItem } from '@/types/commercetypes';
 import { mockProducts } from '@/components/commerce/Data';
 
-const App: React.FC = () => {
+const Global: React.FC = () => {
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const [cartItems, setCartItems] = useState<CartItem[]>([]);
   const [filters, setFilters] = useState<FilterState>({
@@ -70,6 +70,7 @@ const App: React.FC = () => {
           products={filteredProducts}
           onProductSelect={setSelectedProduct}
         />
+   
       </main>
       {selectedProduct && (
         <ProductModal 
@@ -94,4 +95,4 @@ const App: React.FC = () => {
   );
 };
 
-export default App;
+export default Global;
