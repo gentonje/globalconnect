@@ -11,7 +11,7 @@ export const ProductDetail: React.FC<ProductDetailProps> = ({ product, onBack, o
     </button>
     <div className="bg-white p-4 rounded-lg">
     <div className=" flex items-center justify-center">       
-        <img src={product.imageUrl} alt={product.name} className="object-contain rounded w-40 h-40" />
+        <img src={product.imageUrl} alt={product.name} className="object-contain rounded w-full h-72" />
       </div>
       <h2 className="text-xl text-teal-950 font-bold text-center mb-2">{product.name}</h2>
       <p className="text-center text-red-800 text-lg mb-3 font-semibold">Kshs {product.price.toFixed(0)}</p>
