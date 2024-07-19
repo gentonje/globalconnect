@@ -1,8 +1,9 @@
 // File: src/components/ContentArea.tsx
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { ProductCard } from "./ProductCard";
 import { ContentAreaProps } from "@/types/globalShopping";
 import { products } from "@/components/global/data";
+import Loading from "@/app/Loading";
 
 
 export const ContentArea: React.FC<ContentAreaProps> = ({
@@ -67,5 +68,11 @@ export const ContentArea: React.FC<ContentAreaProps> = ({
     ),
   };
 
-  return (content[activeTab as keyof typeof content] || null)
+  return (
+    <div>
+      {isLoading? (<Loading />):( content[activeTab as keyof typeof content] || null)}     
+    </div>
+   
+  )
+
 };
