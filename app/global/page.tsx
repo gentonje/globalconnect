@@ -12,7 +12,7 @@ import { addToCart, clearCart } from "@/actions/globalShopping";
 import Loading from "../Loading";
 
 export default function Homepage() {
-  const [activeTab, setActiveTab] = useState("Advertise");
+  const [activeTab, setActiveTab] = useState("Goods");
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const [cartItems, setCartItems] = useState<Product[]>([]);
   const [isCheckoutOpen, setIsCheckoutOpen] = useState(false);
