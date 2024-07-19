@@ -4,7 +4,7 @@ import { ChevronLeft } from 'lucide-react';
 import { ProductDetailProps } from '@/types/globalShopping';
 
 export const ProductDetail: React.FC<ProductDetailProps> = ({ product, onBack, onAddToCart }) => (
-  <div className="p-4 ">
+  <div className="p-4">
     <button onClick={onBack} className="mb-4 flex items-center text-purple-400">
       <ChevronLeft size={64} className='flex rounded-full animate-pulse' />
       <span className="ml-1 text-2xl">Back</span>
