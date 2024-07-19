@@ -3,7 +3,7 @@ import React from 'react'
 
 export default function Loading() {
   return (
-    <div className='container flex mx-auto font-sans font-semibold justify-center bg-slate-900 text-3xl p-6 items-center text-white min-h-screen'>Loading ...</div>
+    <div className='container flex mx-auto bg-slate-900  min-h-screen '><p className='flex mx-auto font-sans font-bold justify-center h-auto w-auto text-6xl p-6 items-center text-white animate-pulse'>...</p></div>
   )
 }
 

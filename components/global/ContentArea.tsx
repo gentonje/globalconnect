@@ -1,5 +1,5 @@
 // File: src/components/ContentArea.tsx
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { ProductCard } from "./ProductCard";
 import { ContentAreaProps } from "@/types/globalShopping";
 import { products } from "@/components/global/data";
@@ -9,6 +9,16 @@ export const ContentArea: React.FC<ContentAreaProps> = ({
   activeTab,
   onProductClick,
 }) => {
+
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate some asynchronous operation, like fetching data
+    setTimeout(() => {
+      setIsLoading(false); // Set loading state to false after some time (simulating data fetching)
+    }, 2000); // Simulating a 2-second delay
+  }, []); // Empty dependency array means this effect runs only once, on component mount
+
   const content = {
     Advertise: (
       <div className="text-center p-4">
@@ -57,5 +67,5 @@ export const ContentArea: React.FC<ContentAreaProps> = ({
     ),
   };
 
-  return content[activeTab as keyof typeof content] || null;
+  return (content[activeTab as keyof typeof content] || null)
 };
