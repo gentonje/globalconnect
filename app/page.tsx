@@ -1,14 +1,11 @@
 "use client";
 import React, { useState, useEffect } from "react";
 
-import { TailwindIndicator } from "./components/main/MainPage/Tailwindindicator";
+
 
 import { ContentPage } from "@/components/component/ContentPage";
 import Loading from "./Loading";
-import { LandingPage } from "@/components/component/LandingPage";
-import { Sidebar } from "./components/main/MainPage/Sidebar";
-import LoadingDots from "./Loading";
-import LandingPage2 from "@/components/component/Header";
+
 
 
 export default function App() {

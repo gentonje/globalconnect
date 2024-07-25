@@ -12,7 +12,7 @@ import { addToCart, clearCart } from "@/actions/globalShopping";
 import Loading from "../Loading";
 
 export default function Homepage() {
-  const [activeTab, setActiveTab] = useState("Goods");
+  const [activeTab, setActiveTab] = useState("Farmers");
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const [cartItems, setCartItems] = useState<Product[]>([]);
   const [isCheckoutOpen, setIsCheckoutOpen] = useState(false);
@@ -32,6 +32,10 @@ export default function Homepage() {
     setCartItems(addToCart(cartItems, product));
     setSelectedProduct(null);
   };
+  const handleFarmersClick = () => {
+    setActiveTab("Farmers");
+  };
+
   const handleGoodsClick = () => {
     setActiveTab("Goods");
   };
@@ -86,13 +90,13 @@ export default function Homepage() {
               Icon={Tractor}
               label="Farmers"
               isActive={activeTab === "Farmers"}
-              onClick={handleGoodsClick}
+              onClick={handleFarmersClick}
             />
             <TabButton
               Icon={ShoppingBag}
               label="Goods"
               isActive={activeTab === "Goods"}
-              onClick={() => setActiveTab("Goods")}
+              onClick={handleGoodsClick}
             />
             <TabButton
               Icon={User}

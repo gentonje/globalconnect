@@ -69,9 +69,9 @@ export const ContentArea: React.FC<ContentAreaProps> = ({
   };
 
   return (
-    <div>
-      {isLoading? (<Loading />):( content[activeTab as keyof typeof content] || null)}     
-    </div>
+    
+   ( content[activeTab as keyof typeof content] || null)
+    
    
   )
 
